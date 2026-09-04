@@ -20,8 +20,8 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative w-full"
-      style={{ height: "100svh", minHeight: "700px" }}
+      className="relative w-full min-h-[580px] sm:min-h-[640px] md:min-h-[700px]"
+      style={{ height: "100svh" }}
     >
       {/* Background image */}
       <motion.div
@@ -50,7 +50,7 @@ export default function Hero() {
       <CornerBrackets />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col pt-32 md:pt-36 pb-24 px-4 md:px-8">
+      <div className="relative z-10 h-full flex flex-col pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-24 px-4 md:px-8 safe-x">
         <div className="max-w-[1440px] mx-auto w-full flex-1 flex flex-col justify-between">
           {/* Top row: tape + VIN */}
           <motion.div
@@ -85,23 +85,23 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 grid md:grid-cols-[1fr_auto] gap-6 md:items-end max-w-[1000px]"
+              className="mt-6 sm:mt-8 grid md:grid-cols-[1fr_auto] gap-5 sm:gap-6 md:items-end max-w-[1000px]"
             >
-              <p className="max-w-lg text-white/80 text-base md:text-lg leading-snug font-medium">
+              <p className="max-w-lg text-white/80 text-sm sm:text-base md:text-lg leading-snug font-medium">
                 Apple CarPlay Nachrüstung, OEM Retrofits, Karosserie, Lack, HU/AU, Reifen.
                 <span className="text-white"> Alles unter einem Dach.</span>
               </p>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <a
                   href="#kontakt"
-                  className="btn-press oxide-btn inline-flex items-center gap-2 px-6 py-3.5 uppercase tracking-widest text-sm font-stencil"
+                  className="btn-press oxide-btn inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 uppercase tracking-widest text-sm font-stencil min-h-[48px]"
                 >
                   Termin sichern
                   <Arrow />
                 </a>
                 <a
                   href="#leistungen"
-                  className="btn-press inline-flex items-center gap-2 px-6 py-3.5 uppercase tracking-widest text-sm font-stencil border border-white/25 text-white hover:bg-white/10 transition-colors"
+                  className="btn-press inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 uppercase tracking-widest text-sm font-stencil border border-white/25 text-white hover:bg-white/10 transition-colors min-h-[48px]"
                 >
                   Leistungen
                 </a>
@@ -114,16 +114,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap items-end justify-between gap-6"
+            className="flex flex-wrap items-end justify-between gap-4 sm:gap-6"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <RatingStamp />
               <div className="flex flex-col leading-tight">
                 <span className="vin text-white/60">Google Rating</span>
-                <span className="d-hero text-white text-3xl md:text-4xl tabular">
-                  4,9<span className="text-white/40 text-xl">/5</span>
+                <span className="d-hero text-white text-2xl sm:text-3xl md:text-4xl tabular">
+                  4,9<span className="text-white/40 text-lg sm:text-xl">/5</span>
                 </span>
-                <span className="mono text-[10px] text-white/50 tabular">
+                <span className="mono text-[9px] sm:text-[10px] text-white/50 tabular">
                   · 211 Rezensionen · Verifiziert
                 </span>
               </div>
@@ -149,10 +149,10 @@ export default function Hero() {
 function CornerBrackets() {
   return (
     <div className="pointer-events-none absolute inset-0 z-10">
-      <div className="absolute top-24 md:top-28 left-4 md:left-8 w-8 h-8 border-l-2 border-t-2 border-white/40" />
-      <div className="absolute top-24 md:top-28 right-4 md:right-8 w-8 h-8 border-r-2 border-t-2 border-white/40" />
-      <div className="absolute bottom-6 left-4 md:left-8 w-8 h-8 border-l-2 border-b-2 border-white/40" />
-      <div className="absolute bottom-6 right-4 md:right-8 w-8 h-8 border-r-2 border-b-2 border-white/40" />
+      <div className="absolute top-20 sm:top-24 md:top-28 left-3 sm:left-4 md:left-8 w-6 sm:w-8 h-6 sm:h-8 border-l-2 border-t-2 border-white/40" />
+      <div className="absolute top-20 sm:top-24 md:top-28 right-3 sm:right-4 md:right-8 w-6 sm:w-8 h-6 sm:h-8 border-r-2 border-t-2 border-white/40" />
+      <div className="absolute bottom-4 sm:bottom-6 left-3 sm:left-4 md:left-8 w-6 sm:w-8 h-6 sm:h-8 border-l-2 border-b-2 border-white/40" />
+      <div className="absolute bottom-4 sm:bottom-6 right-3 sm:right-4 md:right-8 w-6 sm:w-8 h-6 sm:h-8 border-r-2 border-b-2 border-white/40" />
     </div>
   );
 }

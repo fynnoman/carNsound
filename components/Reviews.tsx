@@ -38,7 +38,7 @@ export default function Reviews() {
   const bgScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
 
   return (
-    <section id="stimmen" ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 overflow-hidden hairline-t">
+    <section id="stimmen" ref={ref} className="relative py-16 sm:py-24 md:py-40 px-4 md:px-8 overflow-hidden hairline-t">
       {/* Parallax BMW-schwarz backdrop */}
       <motion.div
         style={{ y: bgY, scale: bgScale }}
@@ -56,24 +56,24 @@ export default function Reviews() {
 
       <div className="relative max-w-[1440px] mx-auto">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
             <span className="tape-label">Stimmen</span>
             <span className="vin">Sektion 05</span>
           </div>
-          <h2 className="d-hero text-mega leading-[0.85]">
+          <h2 className="d-hero text-mega leading-[0.85] break-words">
             <span className="oxide-text">4,9</span>{" "}
             <span className="chrome-text">bei 211</span>
             <br />
             <span className="chrome-text">Google Rezensionen.</span>
           </h2>
-          <p className="mt-8 text-white/70 text-lg leading-snug max-w-xl">
+          <p className="mt-6 sm:mt-8 text-white/70 text-base sm:text-lg leading-snug max-w-xl">
             Wir schreiben nicht selbst, was wir gut können. Das machen unsere
             Kundinnen und Kunden.
           </p>
         </div>
 
         {/* Review cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {reviews.map((r, i) => (
             <motion.figure
               key={r.name}
@@ -85,7 +85,7 @@ export default function Reviews() {
                 delay: i * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="panel-hard border border-white/10 p-6 md:p-7 flex flex-col min-h-[320px] relative"
+              className="panel-hard border border-white/10 p-5 sm:p-6 md:p-7 flex flex-col min-h-[280px] sm:min-h-[320px] relative"
             >
               {/* Stamp corner */}
               <span className="absolute top-4 right-4 text-[9px] mono tracking-widest text-oxide-400 border border-oxide-500/50 px-2 py-1">
@@ -113,7 +113,7 @@ export default function Reviews() {
         </div>
 
         {/* Call for reviews link */}
-        <div className="mt-10 flex items-center justify-between gap-4 flex-wrap">
+        <div className="mt-8 sm:mt-10 flex items-center justify-between gap-4 flex-wrap">
           <span className="mono text-[10px] text-white/40 tracking-widest">
             NUR ECHTE, VERIFIZIERTE STIMMEN
           </span>
@@ -121,7 +121,7 @@ export default function Reviews() {
             href="https://www.google.com/search?q=Car+%26+Sound+Saarlouis"
             target="_blank"
             rel="noreferrer"
-            className="btn-press inline-flex items-center gap-2 px-5 py-3 border border-white/20 text-white uppercase tracking-widest text-xs font-stencil hover:bg-white/5 transition-colors"
+            className="btn-press inline-flex items-center gap-2 px-5 py-3 border border-white/20 text-white uppercase tracking-widest text-xs font-stencil hover:bg-white/5 transition-colors min-h-[44px]"
           >
             Alle 211 Rezensionen
             <svg width="12" height="12" viewBox="0 0 14 14" fill="none">

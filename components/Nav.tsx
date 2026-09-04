@@ -30,35 +30,35 @@ export default function Nav() {
   return (
     <>
       {/* Top VIN strip */}
-      <div className="fixed top-0 inset-x-0 z-[60] bg-oxide-500 text-white text-[10px] tracking-[0.25em] uppercase font-mono py-1.5 px-4 flex items-center justify-between">
-        <span className="tabular">
-          MEISTERBETRIEB · SEIT 20+ JAHREN · SAARLOUIS
+      <div className="fixed top-0 inset-x-0 z-[60] bg-oxide-500 text-white text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.25em] uppercase font-mono py-1.5 px-3 sm:px-4 flex items-center justify-between gap-2 safe-x">
+        <span className="tabular truncate">
+          <span className="hidden xs:inline sm:inline">MEISTERBETRIEB · SEIT 20+ JAHREN · </span>SAARLOUIS
         </span>
-        <span className="tabular hidden sm:inline">
+        <span className="tabular hidden sm:inline shrink-0">
           MO–FR 08:00–17:00 · TEL 06831 704070
         </span>
-        <span className="tabular sm:hidden">06831 704070</span>
+        <a href="tel:+496831704070" className="tabular sm:hidden shrink-0">06831 704070</a>
       </div>
 
       <motion.header
         initial={{ y: -80 }}
         animate={{ y: hidden ? -120 : 0 }}
         transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
-        className="fixed top-6 inset-x-0 z-50"
+        className="fixed top-5 sm:top-6 inset-x-0 z-50"
       >
-        <div className="mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="mx-auto max-w-[1440px] px-3 sm:px-4 md:px-6 safe-x">
           <div
             className={`panel-hard border border-white/10 flex items-center justify-between pl-4 pr-2 py-2 transition-shadow duration-300 ${
               scrolled ? "shadow-hard" : ""
             }`}
           >
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group min-w-0">
               <LogoMark />
-              <span className="flex flex-col leading-none">
-                <span className="d-hero text-white text-xl tracking-tighter2 -mb-0.5">
+              <span className="flex flex-col leading-none min-w-0">
+                <span className="d-hero text-white text-lg sm:text-xl tracking-tighter2 -mb-0.5 whitespace-nowrap">
                   CAR<span className="oxide-text">&amp;</span>SOUND
                 </span>
-                <span className="vin text-white/40">SLS · CAR HIFI · KFZ</span>
+                <span className="vin text-white/40 hidden xs:inline sm:inline whitespace-nowrap">SLS · CAR HIFI · KFZ</span>
               </span>
             </Link>
 
@@ -106,33 +106,33 @@ export default function Nav() {
         initial={false}
         animate={{ opacity: open ? 1 : 0, pointerEvents: open ? "auto" : "none" }}
         transition={{ duration: 0.25 }}
-        className="lg:hidden fixed inset-0 z-40 bg-void-950/95 backdrop-blur-2xl"
+        className="lg:hidden fixed inset-0 z-40 bg-void-950/95 backdrop-blur-2xl overflow-y-auto safe-x"
       >
-        <div className="pt-32 px-4">
+        <div className="pt-28 sm:pt-32 pb-10 px-3 sm:px-4" style={{ paddingBottom: "calc(2.5rem + env(safe-area-inset-bottom))" }}>
           <div className="panel-hard p-2 flex flex-col">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="px-4 py-4 border-b border-white/[0.06] flex items-center gap-4 hover:bg-white/[0.03]"
+                className="px-4 py-4 border-b border-white/[0.06] flex items-center gap-4 hover:bg-white/[0.03] min-h-[52px]"
               >
                 <span className="mono text-xs text-oxide-400 tabular">{l.no}</span>
                 <span className="d-stencil text-white text-2xl">{l.label}</span>
               </a>
             ))}
             <a
-              href="tel:+4968317040 70"
+              href="tel:+496831704070"
               onClick={() => setOpen(false)}
-              className="mt-4 px-4 py-4 flex items-center justify-between"
+              className="mt-4 px-4 py-4 flex items-center justify-between min-h-[52px]"
             >
               <span className="vin">Rufen</span>
-              <span className="d-hero text-white text-2xl tabular">06831&nbsp;704070</span>
+              <span className="d-hero text-white text-xl sm:text-2xl tabular">06831&nbsp;704070</span>
             </a>
             <a
               href="#kontakt"
               onClick={() => setOpen(false)}
-              className="btn-press mt-2 oxide-btn text-center py-4 uppercase tracking-widest font-stencil text-base"
+              className="btn-press mt-2 oxide-btn text-center py-4 uppercase tracking-widest font-stencil text-base min-h-[52px] flex items-center justify-center"
             >
               Termin anfragen
             </a>

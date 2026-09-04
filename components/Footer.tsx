@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.08] bg-void-950">
       {/* Big wordmark strip */}
-      <div className="border-b border-white/[0.06] py-10 md:py-16 px-4 md:px-8 overflow-hidden">
+      <div className="border-b border-white/[0.06] py-8 sm:py-10 md:py-16 px-4 md:px-8 overflow-hidden">
         <div className="max-w-[1440px] mx-auto">
-          <h3 className="d-hero leading-[0.85] text-[16vw] tracking-tighter2">
+          <h3 className="d-hero leading-[0.85] text-[14vw] sm:text-[15vw] md:text-[16vw] tracking-tighter2">
             <span className="chrome-text">CAR</span>
             <span className="oxide-text">&amp;</span>
             <span className="chrome-text">SOUND</span>
@@ -15,8 +15,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="py-14 md:py-16 px-4 md:px-8">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <div className="py-10 sm:py-14 md:py-16 px-4 md:px-8 safe-x">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           <div className="col-span-2">
             <span className="tape-label">Meisterbetrieb</span>
             <p className="mt-6 text-white/60 max-w-sm leading-snug text-sm">

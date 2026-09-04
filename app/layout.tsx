@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Anton, Barlow, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -59,6 +59,13 @@ export const metadata: Metadata = {
       "Car Hifi Retrofits, CarPlay/Android Auto, Kfz-Service aller Marken, Autoglas, Unfall & Lack, Reifen, HU/AU. Saarlouis.",
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#050506",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

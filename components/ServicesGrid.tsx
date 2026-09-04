@@ -83,14 +83,14 @@ const services: Service[] = [
 
 export default function ServicesGrid() {
   return (
-    <section id="leistungen" className="relative py-24 md:py-40 px-4 md:px-8 hairline-t hairline-b">
+    <section id="leistungen" className="relative py-16 sm:py-24 md:py-40 px-4 md:px-8 hairline-t hairline-b">
       <div className="absolute inset-0 diamond-plate opacity-25 pointer-events-none" />
 
       <div className="relative max-w-[1440px] mx-auto">
         {/* Section header */}
-        <div className="grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-end mb-14">
+        <div className="grid md:grid-cols-[auto_1fr] gap-5 sm:gap-6 md:gap-10 items-end mb-10 sm:mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
               <span className="tape-label">Werkstatt · Leistungen</span>
               <span className="vin">Sektion 02</span>
             </div>
@@ -100,7 +100,7 @@ export default function ServicesGrid() {
               <span className="oxide-text">Acht Disziplinen.</span>
             </h2>
           </div>
-          <p className="max-w-md md:justify-self-end text-white/70 leading-snug">
+          <p className="max-w-md md:justify-self-end text-white/70 leading-snug text-sm sm:text-base">
             Was andere auf drei Betriebe verteilen, machen wir unter einem Dach.
             Elektronik, Karosserie und klassische Werkstatt, aus einer Hand und
             aufeinander abgestimmt.
@@ -120,14 +120,14 @@ export default function ServicesGrid() {
                 delay: (i % 3) * 0.05,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className={`group relative border-r border-b border-white/[0.08] p-6 md:p-8 flex flex-col min-h-[320px] overflow-hidden ${
+              className={`group relative border-r border-b border-white/[0.08] p-5 sm:p-6 md:p-8 flex flex-col min-h-[280px] sm:min-h-[320px] overflow-hidden ${
                 s.featured ? "lg:col-span-1 bg-void-800/40" : ""
               }`}
             >
               {/* Corner race number */}
               <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="d-hero text-white/25 text-6xl leading-none tabular">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <span className="d-hero text-white/25 text-5xl sm:text-6xl leading-none tabular">
                     {s.no}
                   </span>
                   {s.featured && (
@@ -141,8 +141,8 @@ export default function ServicesGrid() {
                 </span>
               </div>
 
-              <div className="mt-8 flex-1">
-                <h3 className="d-stencil text-2xl md:text-3xl text-white leading-[0.95]">
+              <div className="mt-6 sm:mt-8 flex-1">
+                <h3 className="d-stencil text-xl sm:text-2xl md:text-3xl text-white leading-[0.95]">
                   {s.title}
                 </h3>
                 <p className="mono text-[10px] text-oxide-400/80 tracking-[0.18em] uppercase mt-2">

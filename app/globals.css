@@ -34,6 +34,16 @@ body {
   background: var(--bg);
   color: var(--text);
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, [role="button"], input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -262,11 +272,21 @@ body::before {
 
 /* Big display responsive size utility */
 .text-hero {
-  font-size: clamp(72px, 15vw, 260px);
+  font-size: clamp(56px, 15vw, 260px);
 }
 .text-mega {
-  font-size: clamp(48px, 10vw, 160px);
+  font-size: clamp(38px, 10vw, 160px);
 }
 .text-huge {
-  font-size: clamp(40px, 8vw, 120px);
+  font-size: clamp(32px, 8vw, 120px);
+}
+
+/* Safe-area helpers for notch / home indicator */
+.safe-t { padding-top: env(safe-area-inset-top); }
+.safe-b { padding-bottom: env(safe-area-inset-bottom); }
+.safe-l { padding-left: env(safe-area-inset-left); }
+.safe-r { padding-right: env(safe-area-inset-right); }
+.safe-x {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }

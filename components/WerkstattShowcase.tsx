@@ -17,12 +17,12 @@ export default function WerkstattShowcase() {
   const scaleRight = useTransform(scrollYProgress, [0, 1], [1.02, 1.15]);
 
   return (
-    <section id="werkstatt" ref={ref} className="relative py-24 md:py-40 px-4 md:px-8 hairline-t">
+    <section id="werkstatt" ref={ref} className="relative py-16 sm:py-24 md:py-40 px-4 md:px-8 hairline-t">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
-        <div className="grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-end mb-16">
+        <div className="grid md:grid-cols-[auto_1fr] gap-5 sm:gap-6 md:gap-10 items-end mb-10 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
               <span className="tape-label">Der Betrieb</span>
               <span className="vin">Sektion 04</span>
             </div>
@@ -32,7 +32,7 @@ export default function WerkstattShowcase() {
               <span className="oxide-text">Ein Team.</span>
             </h2>
           </div>
-          <p className="max-w-md md:justify-self-end text-white/70 leading-snug">
+          <p className="max-w-md md:justify-self-end text-white/70 leading-snug text-sm sm:text-base">
             Kfz-Werkstatt und Karosseriebetrieb, beide in Saarlouis, beide unter
             Meisterhand. Wer bei uns reinfährt, muss nirgends mehr hin.
           </p>
@@ -58,18 +58,18 @@ export default function WerkstattShowcase() {
             <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white" />
             <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white" />
 
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 flex-wrap">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between gap-3 sm:gap-4 flex-wrap">
               <div>
                 <span className="vin text-white/80 block mb-1">Halle 01</span>
-                <span className="d-stencil text-white text-3xl">Car Hifi &amp; Service</span>
+                <span className="d-stencil text-white text-2xl sm:text-3xl">Car Hifi &amp; Service</span>
               </div>
-              <span className="mono text-[10px] text-white/70 tabular">
+              <span className="mono text-[9px] sm:text-[10px] text-white/70 tabular">
                 49.322°N · 6.749°E
               </span>
             </div>
           </div>
 
-          <div className="md:col-span-4 flex flex-col justify-between h-full min-h-[300px] py-4">
+          <div className="md:col-span-4 flex flex-col justify-between h-full min-h-[240px] sm:min-h-[300px] py-4">
             <div>
               <span className="vin text-white/50 block mb-2">Fakten · Halle 01</span>
               <ul className="space-y-3">
@@ -98,7 +98,7 @@ export default function WerkstattShowcase() {
 
         {/* Big image row 2 - reversed */}
         <div className="mt-6 md:mt-8 grid md:grid-cols-12 gap-4 md:gap-6 items-start">
-          <div className="md:col-span-4 flex flex-col justify-between h-full min-h-[300px] py-4 order-2 md:order-1">
+          <div className="md:col-span-4 flex flex-col justify-between h-full min-h-[240px] sm:min-h-[300px] py-4 order-2 md:order-1">
             <div>
               <span className="vin text-white/50 block mb-2">Fakten · Halle 02</span>
               <ul className="space-y-3">
@@ -141,12 +141,12 @@ export default function WerkstattShowcase() {
             <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white" />
             <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white" />
 
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 flex-wrap">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between gap-3 sm:gap-4 flex-wrap">
               <div>
                 <span className="vin text-white/80 block mb-1">Halle 02</span>
-                <span className="d-stencil text-white text-3xl">Karosserie &amp; Lack</span>
+                <span className="d-stencil text-white text-2xl sm:text-3xl">Karosserie &amp; Lack</span>
               </div>
-              <span className="mono text-[10px] text-white/70 tabular">
+              <span className="mono text-[9px] sm:text-[10px] text-white/70 tabular">
                 BAY 03–05
               </span>
             </div>
