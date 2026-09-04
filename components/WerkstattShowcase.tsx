@@ -22,15 +22,10 @@ export default function WerkstattShowcase() {
         {/* Header */}
         <div className="grid md:grid-cols-[auto_1fr] gap-5 sm:gap-6 md:gap-10 items-end mb-10 sm:mb-16">
           <div>
-            <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
               <span className="tape-label">Der Betrieb</span>
               <span className="vin">Sektion 04</span>
             </div>
-            <h2 className="d-hero text-mega leading-[0.85]">
-              <span className="chrome-text">Zwei Hallen.</span>
-              <br />
-              <span className="oxide-text">Ein Team.</span>
-            </h2>
           </div>
           <p className="max-w-md md:justify-self-end text-white/70 leading-snug text-sm sm:text-base">
             Kfz-Werkstatt und Karosseriebetrieb, beide in Saarlouis, beide unter
@@ -89,7 +84,7 @@ export default function WerkstattShowcase() {
             <div className="pt-6">
               <span className="d-stencil text-oxide-400 text-xl">Meisterbetrieb</span>
               <p className="mt-2 text-white/60 text-sm leading-snug">
-                Kfz-Technikermeister mit über 20 Jahren Praxis. Weil Meisterhand
+                Meisterbetrieb mit über 20 Jahren Praxis. Weil Meisterhand
                 den Unterschied ausmacht.
               </p>
             </div>
